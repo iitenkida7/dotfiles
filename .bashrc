@@ -9,10 +9,6 @@ PS1="\[\e[1;36m\][\u@\h:\w]\$\[\e[00m\]"
 
 # User specific aliases and functions
 
-PATH="$PATH":/usr/local/aws-tools/ec2-api-tools/bin
-PATH="$PATH":/usr/local/aws-tools/ElasticLoadBalancing/bin
-PATH="$PATH":/usr/local/aws-tools/IAMCli/bin/
-PATH="$PATH":/usr/local/aws-tools/CloudWatch/bin
 export LANG=en_US.UTF-8
 export TERM=xterm-256color
 
