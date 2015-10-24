@@ -12,17 +12,24 @@ PS1="\[\e[1;36m\][\u@\h:\w]\$\[\e[00m\]"
 export LANG=en_US.UTF-8
 export TERM=xterm-256color
 
+case "${OSTYPE}" in
+darwin*)
+  alias ls="ls -G"
+  alias ll="ls -lG"
+  ;;
+linux*)
+  alias ls='ls --color=auto'
+  alias ll='ls -l --color'
+  ;;
+esac
+
+
 alias rm='rm -i'
-alias kyou='cd ~/wkdir/`date +"%Y%m%d"`'
-alias kinou="cd ~/wkdir/`date +"%Y%m%d" -d '1 days ago'`"
 alias cp='cp -i'
 alias mv='mv -i'
-alias ls='ls --color=auto --show-control-chars'
 alias ll='ls -l'
 alias grep='grep -E'
 alias tmux='tmux -u'
-alias sshagent="ssh-agent bash ; ssh-add ~paxi009/.ssh/id_rsa"
-
 
 export HISTSIZE=50000
 export HISTFILESIZE=50000
