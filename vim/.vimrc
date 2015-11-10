@@ -25,6 +25,13 @@ NeoBundle 'airblade/vim-gitgutter'
 
 NeoBundle 'tomasr/molokai'
 
+" ステータスバーなやつ
+NeoBundle 'itchyny/lightline.vim'
+set t_Co=256
+set laststatus=2
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
 
 
 " You can specify revision/branch/tag.
@@ -61,12 +68,11 @@ set number
 "set clipboard=unnamed,autoselect
 "set noswapfile
 "set ttyfast
-"set t_Co=256
 "set hidden
 "set nowrap
 set paste
 
-"一部の全角記号の表示がおかしくなることってありませんか？
+" 全角表示のフォロー
 set ambiwidth=double
 set hlsearch
 set backspace=indent,eol,start
