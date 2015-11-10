@@ -25,6 +25,9 @@ NeoBundle 'airblade/vim-gitgutter'
 
 NeoBundle 'tomasr/molokai'
 
+" SVNの差分見るやつ（スゲー重かったので一旦、無効に、環境の問題？）
+" NeoBundle 'vim-scripts/vim-svngutter'
+
 " ステータスバーなやつ
 NeoBundle 'itchyny/lightline.vim'
 set t_Co=256
