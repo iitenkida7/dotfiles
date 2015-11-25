@@ -24,6 +24,9 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'airblade/vim-gitgutter'
 
 NeoBundle 'tomasr/molokai'
+"tree explorer
+NeoBundle 'scrooloose/nerdtree'
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 " SVNの差分見るやつ（スゲー重かったので一旦、無効に、環境の問題？）
 " NeoBundle 'vim-scripts/vim-svngutter'
