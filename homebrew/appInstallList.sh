@@ -6,6 +6,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew cask install iterm2 
 brew cask install remote-desktop-connection 
 brew cask install virtualbox
+brew cask install clipy
 #cask list end
 brew cask cleanup
 
