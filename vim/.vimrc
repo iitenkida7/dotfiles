@@ -24,7 +24,20 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'airblade/vim-gitgutter'
 
 NeoBundle 'tomasr/molokai'
+"tree explorer
+NeoBundle 'scrooloose/nerdtree'
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
+" SVNの差分見るやつ（スゲー重かったので一旦、無効に、環境の問題？）
+" NeoBundle 'vim-scripts/vim-svngutter'
+
+" ステータスバーなやつ
+NeoBundle 'itchyny/lightline.vim'
+set t_Co=256
+set laststatus=2
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
 
 
 " You can specify revision/branch/tag.
@@ -61,12 +74,11 @@ set number
 "set clipboard=unnamed,autoselect
 "set noswapfile
 "set ttyfast
-"set t_Co=256
 "set hidden
 "set nowrap
 set paste
 
-"一部の全角記号の表示がおかしくなることってありませんか？
+" 全角表示のフォロー
 set ambiwidth=double
 set hlsearch
 set backspace=indent,eol,start

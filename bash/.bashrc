@@ -31,6 +31,8 @@ alias ll='ls -l'
 alias grep='grep -E'
 alias tmux='tmux -u'
 
+alias kyou='mkdir -p ~/wkdir/`date +"%Y%m%d"` ; cd ~/wkdir/`date +"%Y%m%d"` '
+
 export HISTSIZE=50000
 export HISTFILESIZE=50000
 export HISTCONTROL=ignoreboth
