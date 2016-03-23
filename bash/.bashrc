@@ -6,11 +6,11 @@ if [ -f /etc/bashrc ]; then
 fi
 
 #水色
-PS1="\[\e[1;36m\][\u@\h:\w]\$\[\e[00m\]"
+#PS1="\[\e[1;36m\][\u@\h:\w]\$\[\e[00m\]"
 #しゅん色
 #PS1="\[\e[1;31m\][\u@\h:\w]\$\[\e[00m\]"
 #黄緑
-#PS1="\[\e[1;32m\][\u@\h:\w]\$\[\e[00m\]"
+PS1="\[\e[1;32m\][\u@\h:\w]\$\[\e[00m\]"
 
 # User specific aliases and functions
 
@@ -49,9 +49,9 @@ export LS_COLORS='di=01;36;40:'
 export LSCOLORS=gxfxcxdxbxegedabagacad
 export PAGER=less
 export EDITOR="vim"
-export LESS='-X -i -P ?f%f:(stdin).  ?lb%lb?L/%L..  [?eEOF:?pb%pb\%..]'
+export LESS='-X -R -i -P ?f%f:(stdin).  ?lb%lb?L/%L..  [?eEOF:?pb%pb\%..]'
 export LESSOPEN='| /usr/bin/lesspipe.sh %s'
-
+export LESSCHARSET=utf-8
 
 # "!"をつかって履歴上のコマンドを実行するとき、
 # 実行するまえに必ず展開結果を確認できるようにする。
