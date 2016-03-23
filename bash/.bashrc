@@ -5,7 +5,12 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+#水色
 PS1="\[\e[1;36m\][\u@\h:\w]\$\[\e[00m\]"
+#しゅん色
+#PS1="\[\e[1;31m\][\u@\h:\w]\$\[\e[00m\]"
+#黄緑
+#PS1="\[\e[1;32m\][\u@\h:\w]\$\[\e[00m\]"
 
 # User specific aliases and functions
 
