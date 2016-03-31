@@ -1,6 +1,10 @@
 #!/bin/bash
 
-wget https://github.com/peco/peco/releases/download/v0.3.3/peco_linux_amd64.tar.gz
+#https://developers.eure.jp/event/peco_anyframe_zsh/
+
+
+wget https://github.com/peco/peco/releases/download/v0.3.3/peco_linux_amd64.tar.gz -P /tmp
+cd /tmp
 tar xzvf peco_linux_amd64.tar.gz 
-mv peco_linux_amd64/peco /usr/local/bin
+sudo mv peco_linux_amd64/peco /usr/local/bin
 peco --version
