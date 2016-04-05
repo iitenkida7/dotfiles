@@ -84,3 +84,7 @@ if [[ -s ~/.nvm/nvm.sh ]];
  then source ~/.nvm/nvm.sh
 fi
 
+if [ -d ~/.local/bin ] ; then
+ PATH="~/.local/bin:${PATH}"
+fi
+
