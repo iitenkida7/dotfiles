@@ -5,12 +5,23 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-#水色
-#PS1="\[\e[1;36m\][\u@\h:\w]\$\[\e[00m\]"
-#しゅん色
-#PS1="\[\e[1;31m\][\u@\h:\w]\$\[\e[00m\]"
-#黄緑
-PS1="\[\e[1;32m\][\u@\h:\w]\$\[\e[00m\]"
+DOTFILES_PATH=${HOME}/dotfiles/bash
+
+if [ -f    ${DOTFILES_PATH}/git-completion.bash ] ; then
+    source ${DOTFILES_PATH}/git-completion.bash
+    source ${DOTFILES_PATH}/git-prompt.sh
+    GIT_PS1_SHOWDIRTYSTATE=true
+    #export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
+    export PS1='\[\e[1;32m\][\u@\h:\w]\[\033[31m\]$(__git_ps1)\[\e[1;32m\]\$\[\e[00m\]'
+else
+    #水色
+    #PS1="\[\e[1;36m\][\u@\h:\w]\$\[\e[00m\]"
+    #しゅん色
+    #PS1="\[\e[1;31m\][\u@\h:\w]\$\[\e[00m\]"
+    #黄緑
+    PS1="\[\e[1;32m\][\u@\h:\w]\$\[\e[00m\]"
+fi
+
 
 # User specific aliases and functions
 
