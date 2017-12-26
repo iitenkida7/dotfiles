@@ -85,10 +85,12 @@ set number
 "set backspace=indent,eol,start
 "set clipboard=unnamed,autoselect
 "set noswapfile
-"set ttyfast
 "set hidden
 "set nowrap
+"set list
+set ttyfast
 set paste
+set cursorline 
 
 " 全角表示のフォロー
 set ambiwidth=double
