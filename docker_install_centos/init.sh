@@ -11,6 +11,7 @@ sudo usermod -aG docker ${USER}
 
 
 sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+sudo chown 755 /usr/local/bin/docker-compose
 
 # 成功してるかな−
 docker version
