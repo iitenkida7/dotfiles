@@ -5,11 +5,14 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-DOTFILES_PATH=${HOME}/dotfiles/bash
-
-if [ -f    ${DOTFILES_PATH}/git-completion.bash ] ; then
-    source ${DOTFILES_PATH}/git-completion.bash
-    source ${DOTFILES_PATH}/git-prompt.sh
+if [ -f    ${HOME}/dotfiles/bash/git-completion.bash ] ; then
+    source ${HOME}/dotfiles/bash/git-completion.bash
+    source ${HOME}/dotfiles/bash/git-prompt.sh
+    GIT_PS1_SHOWDIRTYSTATE=true
+    export PS1='\[\e[1;36m\][\u@\h:\w]\[\033[31m\]$(__git_ps1)\[\e[1;36m\]\$\[\e[00m\]'
+elif [ -f  ${HOME}/github/dotfiles/bash/git-completion.bash ] ; then
+    source ${HOME}/github/dotfiles/bash/git-completion.bash
+    source ${HOME}/github/dotfiles/bash/git-prompt.sh
     GIT_PS1_SHOWDIRTYSTATE=true
     export PS1='\[\e[1;36m\][\u@\h:\w]\[\033[31m\]$(__git_ps1)\[\e[1;36m\]\$\[\e[00m\]'
 else
